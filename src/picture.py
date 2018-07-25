@@ -1,7 +1,11 @@
+import os
+import sys
 import numpy as np
 from PIL import Image
 from keras.preprocessing import image
 from keras.applications.resnet50 import ResNet50, preprocess_input, decode_predictions
+
+os.chdir(sys.path[0])
 
 model = ResNet50(weights='imagenet')
 target_size = (224, 224)
